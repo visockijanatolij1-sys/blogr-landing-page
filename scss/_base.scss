@@ -1,0 +1,28 @@
+@use "variables";
+
+//  font-family: "Ubuntu", sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: "Overpass", sans-serif;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.6px;
+    color: variables.$gray600;
+}
+
+ul, li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background-color: transparent;
+}

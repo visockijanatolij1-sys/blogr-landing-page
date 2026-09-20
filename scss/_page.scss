@@ -1,0 +1,222 @@
+@use "variables";
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.container{
+    max-width: 1144px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.ibg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ibg img{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: 
+        url("../images/bg-pattern-intro-desktop.svg"),
+        linear-gradient(135deg, #FF8F71, #FF3E55);
+    background-repeat: no-repeat;
+    background-position: 25% 52%, center;
+    border-radius: 0 0 0 100px;
+        
+}
+
+.header{
+    padding-top: 59px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    position: relative;
+}
+.header-logo{
+    width: 100px;
+    height: 39px;
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+}
+.menu{
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.burger{
+    display: none;
+}
+
+.menu-list{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.menu-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.menu-link_text, .button-login{
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    line-height: 115%;
+    letter-spacing: 0px;
+    color: variables.$white;
+    font-weight: 700;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        opacity: 1;
+    }
+}
+.menu-link_icon{
+    background-image: url("../images/icon-arrow-light.svg");
+    width: 12px;
+    height: 6px;
+}
+
+.menu-buttons{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.button-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 137px;
+    height: 48px;
+    background-color: variables.$white;
+    font-weight: 700;
+    border-radius: 30px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    line-height: 115%;
+    letter-spacing: 0px;
+    color: variables.$red500;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        background-color: variables.$red400;
+        color: variables.$white;
+    }
+}
+
+@media (max-width:767.98px) {
+    .menu{
+        position: fixed;
+        top: 125px;
+        right: 40px;
+        left: 40px;
+        bottom: 39px;
+        max-width: 688px;
+        transform: translateX(180%);
+        background-color: variables.$white;
+        transition: all 0.3s ease 0s;
+        display: flex;
+        flex-direction: column;
+        padding: 32px 24px 82px;
+        gap: 32px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .burger{
+        display: flex;
+        width: 32px;
+        height: 24px;
+        margin-left: auto;
+        position: relative;
+        span{
+            width: 32px;
+            height: 2px;
+            background-color: variables.$white;
+            opacity: 0.7;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease 0s;
+            &::before{
+                content: "";
+                width: 32px;
+                height: 2px;
+                background-color: variables.$white;
+                opacity: 0.7;
+                position: absolute;
+                left: 0;
+                top: 10px;
+                transition: all 0.3s ease 0s;
+            }
+            &::after{
+                content: "";
+                width: 32px;
+                height: 2px;
+                background-color: variables.$white;
+                opacity: 0.7;
+                position: absolute;
+                left: 0;
+                top: -10px;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+
+    .burger.active{
+        span{
+            background-color: transparent;
+            &::before{
+                top: 0;
+                transform: rotate(45deg);
+            }
+            &::after{
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .menu.active{
+        transform: translateX(0);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .menu.active .menu-link_text, .button-login{
+        color: variables.$blue900;
+    }
+    .menu.active .button-signup{
+        background: 
+            linear-gradient(135deg, #FF8F71, #FF3E55);
+        color: variables.$white;
+
+        }
+    .menu.active .menu-link_icon{
+        background-image: url("../images/icon-arrow-dark.svg");
+    }
+    .menu.active .menu-list{
+        flex-direction: column;
+        gap: 32px;
+    }
+}

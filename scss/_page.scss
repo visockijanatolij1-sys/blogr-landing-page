@@ -133,9 +133,11 @@
         left: 40px;
         bottom: 39px;
         max-width: 688px;
+        width: 100%;
         transform: translateX(180%);
         background-color: variables.$white;
         transition: all 0.3s ease 0s;
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         padding: 32px 24px 82px;
@@ -218,5 +220,124 @@
     .menu.active .menu-list{
         flex-direction: column;
         gap: 32px;
+    }
+}
+
+// =============================================
+
+.product-dropdown_button,
+.company-dropdown_button,
+.connect-dropdown_button{
+    position: relative;
+
+}
+.product-dropdown_menu,
+.company-dropdown_menu,
+.connect-dropdown_menu{
+    position: absolute;
+    background-color: variables.$white;
+    padding: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+.product-dropdown_menu{
+    left: 110px;
+    bottom: -150px;
+}
+.company-dropdown_menu{
+    left: 240px;
+    bottom: -150px;
+}
+.connect-dropdown_menu{
+    left: 370px;
+    bottom: -150px;
+}
+.product-dropdown_menu.active,
+.company-dropdown_menu.active,
+.connect-dropdown_menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.product-dropdown_button.active > .product-icon{
+    transform: rotateX(180deg);
+    transition: all 0.8s ease 0s;
+}
+.company-dropdown_button.active > .company-icon{
+    transform: rotateX(180deg);
+    transition: all 0.8s ease 0s;
+}
+.connect-dropdown_button.active > .connect-icon{
+    transform: rotateX(180deg);
+    transition: all 0.8s ease 0s;
+}
+
+.dropdown_link{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    line-height: 115%;
+    letter-spacing: 0px;
+    color: variables.$blue900;
+    &:hover{
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu{
+        position: fixed;
+        top: 125px;
+        left: 40px;
+        right: 40px;
+        bottom: 39px;
+
+        width: auto;
+        max-width: none;
+    }
+    .menu-list{
+        width: 100%;
+    }
+    .menu-item{
+        width: 100%;
+    }
+    .menu-link{
+        margin: 0 auto 32px;
+    }
+    .product-dropdown_menu,
+    .company-dropdown_menu,
+    .connect-dropdown_menu{
+        position: static;
+        display: none;
+    }
+    .product-dropdown_menu.active,
+    .company-dropdown_menu.active,
+    .connect-dropdown_menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        background-color: variables.$gray100;
+        padding: 19px;
+        // max-width: 640px;
+        width: 100%;
+
+    }
+    .dropdown_link{
+        opacity: 0.75;
+    }
+    .menu-buttons{
+        border-top: 2px solid variables.$gray100;
+        padding-top: 24px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 424.98px) {
+    .menu-buttons{
+        flex-direction: column;
     }
 }

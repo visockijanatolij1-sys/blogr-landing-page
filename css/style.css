@@ -366,5 +366,83 @@ button {
     flex-direction: column;
   }
 }
+.hero-content {
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 156px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.content-hero_title {
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.content-hero_text {
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: 0px;
+  color: #fff;
+}
+
+.content-hero_buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.content-hero_start,
+.content-hero_learn {
+  width: 137px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  transition: all 0.3s ease 0s;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 115%;
+  font-weight: 700;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.content-hero_start {
+  background-color: #fff;
+  color: #FF505C;
+}
+.content-hero_start:hover {
+  opacity: 0.7;
+}
+
+.content-hero_learn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.content-hero_learn:hover {
+  color: #FF505C;
+  background-color: #fff;
+}
+
+@media (max-width: 424.98px) {
+  .hero-content {
+    padding-top: 96px;
+  }
+  .content-hero_title {
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: -1.2px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

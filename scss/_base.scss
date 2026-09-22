@@ -15,6 +15,7 @@ html, body{
     line-height: 175%;
     letter-spacing: 0.6px;
     color: variables.$gray600;
+    overflow-x: hidden;
 }
 
 ul, li{

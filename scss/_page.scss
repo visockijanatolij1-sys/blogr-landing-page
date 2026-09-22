@@ -417,3 +417,108 @@
         letter-spacing: -1.2px;   
     }
 }
+
+// =====================================
+
+.future{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 76px;
+}
+.future-title{
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: -1.2px;
+    color: variables.$blue900;
+    text-align: center;
+}
+.future-body{
+    display: flex;
+    align-items: center;
+    gap: 125px;
+    width: 100%;
+    position: relative;
+}
+.future-content{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 540px;
+}
+.row-sub_title{
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    font-weight: 600;
+    color: variables.$blue900;
+}
+.row-future_sub-text{
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.6px;
+    font-weight: 100;
+    color: variables.$blue900;
+}
+.future-img{
+    width: 890px;
+    height: 882px;
+    background-image: url("../images/illustration-editor-desktop.svg");
+    position: absolute;
+    top: -245px;
+    right: -464px;
+}
+
+@media (max-width: 1023.98px) {
+    .future{
+        margin-top: 100px;
+        gap: 16px;
+        margin-bottom: 64px;
+    }
+    .future-body{
+        gap: 16px;
+    }
+    .future-img {
+        position: static;
+        width: 100%;
+        max-width: 866px;
+        height: auto;
+        aspect-ratio: 866 / 739;
+        background-size: contain;
+    }
+    .future-body{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .future-content{
+        gap: 64px;
+    }
+    .row{
+        text-align: center;
+        gap: 16px;
+    }
+}
+@media (max-width:424.98px) {
+    .future-title{
+        font-size: 28px;
+        line-height: 100%;
+        letter-spacing: 0px;
+    }
+    .future{
+        gap: 56px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .future-content{
+        gap: 56px;
+    }
+    .future-img{
+        background-image: url("../images/illustration-editor-mobile.svg");
+    }
+}

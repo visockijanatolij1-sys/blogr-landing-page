@@ -16,7 +16,7 @@
                     <a href="#" class="header-logo">
                         <img src="./images/logo.svg" alt="Blogr">
                     </a>
-                    <nav class="menu">
+                    <nav class="menu" id="main-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
                                 <button class="menu-link product-dropdown_button">
@@ -86,9 +86,15 @@
                             <button class="button-signup">Sign Up</button>
                         </div>
                     </nav>
-                    <div class="burger">
+                    <button
+                        class="burger"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false"
+                        aria-controls="main-menu"
+                    >
                         <span></span>
-                    </div>
+                    </button>
                 </header>
                 <div class="hero-content">
                     <h1 class="content-hero_title">A modern publishing platform</h1>
@@ -106,11 +112,15 @@
                 <div class="future-body">
                     <div class="future-content">
                         <div class="future-row row">
-                            <p class="row-future_sub-title row-sub_title">Introducing an extensible editor</p>
+                            <h3 class="row-future_sub-title row-sub_title">
+                                Introducing an extensible editor
+                            </h3>
                             <p class="row-future_sub-text row-sub_text">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
                         </div>
                         <div class="future-row row">
-                            <p class="row-future_sub-title row-sub_title">Robust content management</p>
+                            <h3 class="row-future_sub-title row-sub_title">
+                                Introducing an extensible editor
+                            </h3>
                             <p class="row-future_sub-text row-sub_text">Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
                         </div>
                     </div>
@@ -122,7 +132,7 @@
                 <div class="container">
                     <div class="state-row">
                         <div class="state-body">
-                            <h3 class="state-body_title">State of the Art Infrastructure</h3>
+                            <h2 class="state-body_title">State of the Art Infrastructure</h2>
                             <p class="state-body_text">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
                         </div>
                     </div>
@@ -134,11 +144,11 @@
                         <div class="tool-img"></div>
                         <div class="tool-content">
                             <div class="tool-row row">
-                                <p class="row-tool_sub-title row-sub_title">Free, open, simple</p>
+                                <h3 class="row-tool_sub-title row-sub_title">Free, open, simple</h3>
                                 <p class="row-tool_sub-text row-sub_text">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
                             </div>
                             <div class="tool-row row">
-                                <p class="row-tool_sub-title row-sub_title">Powerful tooling</p>
+                                <h3 class="row-tool_sub-title row-sub_title">Powerful tooling</h3>
                                 <p class="row-tool_sub-text row-sub_text">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
                             </div>
                         </div>
@@ -156,7 +166,7 @@
                     <div class="footer-row">
                         <div class="footer-columns">
                             <a href="#" class="footer-links">Product</a>
-                            <nav class="footer-menu">
+                            <nav class="footer-menu" aria-label="Product">
                                 <ul class="menu-footer_list">
                                     <li class="menu-footer_item">
                                         <a href="#" class="menu-footer_link">Overview</a>
@@ -178,7 +188,7 @@
                         </div>
                         <div class="footer-columns">
                             <a href="#" class="footer-links">Company</a>
-                            <nav class="footer-menu">
+                            <nav class="footer-menu" aria-label="Company">
                                 <ul class="menu-footer_list">
                                     <li class="menu-footer_item">
                                         <a href="#" class="menu-footer_link">About</a>
@@ -197,7 +207,7 @@
                         </div>
                         <div class="footer-columns">
                             <a href="#" class="footer-links">Connect</a>
-                            <nav class="footer-menu">
+                            <nav class="footer-menu" aria-label="Connect">
                                 <ul class="menu-footer_list">
                                     <li class="menu-footer_item">
                                         <a href="#" class="menu-footer_link">Contact</a>

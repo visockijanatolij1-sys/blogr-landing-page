@@ -28,3 +28,13 @@ a{
 button{
     background-color: transparent;
 }
+.menu-link:focus-visible,
+.burger:focus-visible,
+.button-login:focus-visible,
+.button-signup:focus-visible,
+.content-hero_start:focus-visible,
+.content-hero_learn:focus-visible,
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}

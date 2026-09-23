@@ -13,21 +13,33 @@ const connectDropdownMenu = document.querySelector(".connect-dropdown_menu");
 burger.addEventListener("click", () => {
     burger.classList.toggle("active");
     menu.classList.toggle("active");
+
+    const isOpen = menu.classList.contains("active");
+    menu.setAttribute("aria-expanded", isOpen);
 });
 
 productDropdownButton.addEventListener("click", () => {
     productDropdownMenu.classList.toggle("active");
     productDropdownButton.classList.toggle("active");
+
+    const isOpen = productDropdownMenu.classList.contains("active");
+    productDropdownButton.setAttribute("aria-expanded", isOpen);
 });
 
 companyDropdownButton.addEventListener("click", () => {
     companyDropdownMenu.classList.toggle("active");
     companyDropdownButton.classList.toggle("active");
+
+    const isOpen = companyDropdownButton.classList.contains("active");
+    companyDropdownButton.setAttribute("aria-expanded", isOpen);
 });
 
 connectDropdownButton.addEventListener("click", () => {
     connectDropdownMenu.classList.toggle("active");
     connectDropdownButton.classList.toggle("active");
+
+    const isOpen = companyDropdownButton.classList.contains("active");
+    companyDropdownButton.setAttribute("aria-expanded", isOpen);
 });
 
 

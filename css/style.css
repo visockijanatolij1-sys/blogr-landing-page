@@ -27,6 +27,17 @@ button {
   background-color: transparent;
 }
 
+.menu-link:focus-visible,
+.burger:focus-visible,
+.button-login:focus-visible,
+.button-signup:focus-visible,
+.content-hero_start:focus-visible,
+.content-hero_learn:focus-visible,
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -706,7 +717,7 @@ button {
 }
 .footer {
   width: 100%;
-  min-height: 359px;
+  min-height: 259px;
   background-color: #24242C;
   border-radius: 0 100px 0 0;
 }
@@ -727,7 +738,7 @@ button {
 .footer-columns {
   width: 100%;
   max-width: 230px;
-  min-height: 250px;
+  min-height: 170px;
   display: flex;
   flex-direction: column;
   gap: 32px;
